@@ -1,8 +1,7 @@
-// components/Footer.tsx
 import React from 'react';
 import './Footer.css';
 
-const Footer: React.FC = () => {
+export default function Footer(): JSX.Element {
   return (
     <footer className="footer">
       <div>© QPICK</div>
@@ -12,4 +11,4 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer;
+
