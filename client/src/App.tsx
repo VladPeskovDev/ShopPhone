@@ -1,19 +1,20 @@
+// src/App.tsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import CatalogPage from './components/pages/CatalogPage';
 import CartPage from './components/pages/CartPage';
-import './App.css';
+import { CartProvider } from './components/CartContext';
 
 function App(): JSX.Element {
   return (
-    <Router>
-      <div className="App">
+    <CartProvider>
+      <Router>
         <Routes>
           <Route path="/" element={<CatalogPage />} />
           <Route path="/cart" element={<CartPage />} />
         </Routes>
-      </div>
-    </Router>
+      </Router>
+    </CartProvider>
   );
 }
 
