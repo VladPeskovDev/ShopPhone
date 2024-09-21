@@ -1,7 +1,7 @@
-// src/pages/CatalogPage.tsx
 import React from 'react';
 import Header from '../Header';
 import ProductCatalog from '../ProductCatalog';
+import Footer from '../Footer';
 
 
 function CatalogPage(): JSX.Element {
@@ -9,6 +9,7 @@ function CatalogPage(): JSX.Element {
     <div>
       <Header />
       <ProductCatalog />
+      <Footer />
       
     </div>
   );
