@@ -1,0 +1,10 @@
+/* src/components/ProductCatalog.css */
+.product-catalog {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    gap: 20px; /* Промежуток между карточками */
+    width: 100%; /* Ширина каталога */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  

@@ -1,0 +1,36 @@
+/* styles/Header.css */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1109.89px;
+    height: 60px;
+    position: absolute;
+    left: 165px;
+    top: 0;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .icons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+  }
+  
+  .heart {
+    background-image: url('/path-to-heart-icon');
+  }
+  
+  .cart {
+    background-image: url('/path-to-cart-icon');
+  }
+  
