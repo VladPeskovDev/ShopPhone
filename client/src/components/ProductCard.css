@@ -1,35 +1,76 @@
 /* styles/ProductCard.css */
 .product-card {
-    width: 250px;
-    height: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border: 1px solid #ccc;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .product-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .product-info {
-    text-align: center;
-  }
-  
-  .buy-button {
-    padding: 10px;
-    background-color: orange;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .buy-button:hover {
-    background-color: darkorange;
-  }
-  
+  width: 250px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative; /* Для позиционирования элементов */
+}
+
+.product-card img {
+  max-width: 100%;
+  height: 150px; /* Фиксируем высоту изображения */
+  object-fit: cover; /* Обрезаем изображение, чтобы оно полностью вместилось */
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-info {
+  text-align: center;
+  flex-grow: 1;
+  width: 100%;
+  position: relative;
+}
+
+h3 {
+  position: absolute;
+  bottom: 70px; /* Размещаем название над рейтингом */
+  left: 15px;
+  right: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.rating {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.price {
+  position: absolute;
+  bottom: 50px;
+  right: 15px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.buy-button {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  padding: 10px;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buy-button:hover {
+  background-color: darkorange;
+}

@@ -14,9 +14,9 @@ const ProductCard: React.FC<Product> = ({ id, name, price, image, rating }) => {
     <div className="product-card">
       <img src={image} alt={name} />
       <div className="product-info">
-        <h3>{name}</h3>
-        <p>{price} Р</p>
+        <h3>{name}</h3> {/* Название товара над рейтингом */}
         <span className="rating">⭐ {rating}</span>
+        <span className="price">{price} Р</span>
         <button className="buy-button">Купить</button>
       </div>
     </div>

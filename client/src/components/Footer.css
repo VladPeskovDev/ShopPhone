@@ -3,9 +3,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1110px;
+  width: 850px;
   height: 149px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f1f1f1;
+  background-color: white;
+  margin-left: 278px;
+  margin-top: 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  
 }
