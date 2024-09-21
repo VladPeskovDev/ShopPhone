@@ -11,8 +11,9 @@ export default function CartPage(): JSX.Element {
 
   
   return (
-    <div className="cart-page">
+    <div>
       <Header />
+    <div className="cart-page">
       <div className="cart-items">
         {cartItems.length === 0 ? (
           <p>Корзина пуста</p>
@@ -33,8 +34,6 @@ export default function CartPage(): JSX.Element {
           ))
         )}
       </div>
-
-      {/* Секция с итоговой суммой и кнопкой оформления */}
       <div className="cart-summary">
         <div className="cart-summary-box">
           <h2>ИТОГО</h2>
@@ -44,7 +43,9 @@ export default function CartPage(): JSX.Element {
         </div>
       </div>
 
-      <Footer />
+      
+    </div>
+    <Footer />
     </div>
   );
 }
