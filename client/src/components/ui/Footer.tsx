@@ -8,23 +8,23 @@ export default function Footer(): JSX.Element {
   const { t, i18n } = useTranslation();
 
   const changeLanguage = (lng: string): void => {
-    i18n.changeLanguage(lng);
+    void i18n.changeLanguage(lng);
   };
   return (
     <footer className="footer">
-      {/* Первый столбец */}
+      
       <div className="footer-column">
         <div className="footer-logo">© QPICK</div>
       </div>
 
-      {/* Второй столбец */}
+      
       <div className="footer-column">
       <Link to="/like" className="footer-link">Избранное</Link>
         <div><Link to="/cart" className="footer-link">Корзина</Link></div>
         <a href="https://t.me/VladislavPeskov" target="_blank" rel="noreferrer" className="footer-link">Контакты</a>
       </div>
 
-      {/* Третий столбец */}
+      
       <div className="footer-column">
         <div>{t('termsOfService')}</div>
         <div className="footer-language">
@@ -34,12 +34,12 @@ export default function Footer(): JSX.Element {
         </div>
       </div>
 
-      {/* Четвёртый столбец с иконками */}
+      
       <div className="footer-column footer-icons">
         <a href="https://t.me/VladislavPeskov" target="_blank" rel="noreferrer" className="icon-link">
           <FaTelegramPlane className="icon" />
         </a>
-        <a href="https://wa.me/79165780936?text=Здравствуйте, хочу купить наушники" target="_blank" rel="noreferrer" className="icon-link">
+        <a href="https://wa.me/79165780936?text=Здравствуйте, хочу купить наушники" target="_blank" rel="noreferrer" className="icon-link"> 
           <FaWhatsapp className="icon" />
         </a>
         <a href="https://vk.com/id64233288" target="_blank" rel="noreferrer" className="icon-link">

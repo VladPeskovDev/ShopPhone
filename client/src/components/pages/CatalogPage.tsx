@@ -1,18 +1,15 @@
 import React from 'react';
-import ProductCatalog from '../ProductCatalog';
-import ProductCatalog2 from '../ProductCatalog2';
-import Footer from '../Footer';
-
-
+import ProductCatalog from '../ui/ProductCatalog';
+import ProductCatalog2 from '../ui/ProductCatalog2';
 
 function CatalogPage(): JSX.Element {
   return (
     <div>
-    <div>
-      <ProductCatalog />
-      <ProductCatalog2 />
+      <div>
+        <ProductCatalog />
+        <ProductCatalog2 />
       </div>
-      </div>
+    </div>
   );
 }
 
