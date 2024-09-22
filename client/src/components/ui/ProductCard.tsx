@@ -1,8 +1,9 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react';
 import './ProductCard.css';
 // eslint-disable-next-line import/no-cycle
-import { useCart } from './CartContext';
-import ProductDetailsModal from './ui/ProductDetailsModal';
+import { useCart } from '../CartContext';
+import ProductDetailsModal from './ProductDetailsModal';
 
 export type Product = {
   id: number;
@@ -13,7 +14,7 @@ export type Product = {
 };
 
 export default function ProductCard({ id, name, price, image, rating }: Product): JSX.Element {
-  const { addToCart } = useCart(); 
+  const { addToCart } = useCart();
   const [open, setOpen] = useState(false);
 
   const handleOpen = (): void => {
@@ -30,18 +31,18 @@ export default function ProductCard({ id, name, price, image, rating }: Product)
 
   return (
     <>
-    <div className="product-card">
-      <img src={image} alt={name} onClick={handleOpen}/>
-      <div className="product-info">
-        <h3>{name}</h3>
-        <span className="rating">⭐ {rating}</span>
-        <span className="price">{price} Р</span>
-        <button className="buy-button" onClick={handleAddToCart}>
-          Купить
-        </button>
+      <div className="product-card">
+        <img src={image} alt={name} onClick={handleOpen} />
+        <div className="product-info">
+          <h3>{name}</h3>
+          <span className="rating">⭐ {rating}</span>
+          <span className="price">{price} Р</span>
+          <button className="buy-button" onClick={handleAddToCart}>
+            Купить
+          </button>
+        </div>
       </div>
-    </div>
-    <ProductDetailsModal
+      <ProductDetailsModal
         product={{ id, name, price, image, rating }}
         open={open}
         handleClose={handleClose}
@@ -49,4 +50,3 @@ export default function ProductCard({ id, name, price, image, rating }: Product)
     </>
   );
 }
-

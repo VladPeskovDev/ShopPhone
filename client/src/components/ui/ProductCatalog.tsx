@@ -1,20 +1,15 @@
 import React from 'react';
+import { products } from '../Product';
+import './ProductCatalog2.css';
 import ProductCard from './ProductCard';
-import './ProductCatalog2.css'; 
-import { products } from './Product2'; 
 
-
-
-
-export default function ProductCatalog2(): JSX.Element {
+export default function ProductCatalog(): JSX.Element {
   return (
     <div className="product-catalog">
-      {products.map(product => (
+      {products.map((product) => (
         // eslint-disable-next-line react/jsx-props-no-spreading
         <ProductCard key={product.id} {...product} />
       ))}
     </div>
   );
-};
-
-
+}

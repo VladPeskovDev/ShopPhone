@@ -10,8 +10,7 @@ interface ProductDetailsModalProps {
 }
 
 export default function ProductDetailsModal({ product, open, handleClose }: ProductDetailsModalProps): JSX.Element {
-  if (!product) return null;
-
+  
   return (
     <Modal open={open} onClose={handleClose} aria-labelledby="modal-title" aria-describedby="modal-description">
       <Box className="modal-box">
