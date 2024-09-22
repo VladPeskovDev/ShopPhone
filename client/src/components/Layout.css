@@ -1,0 +1,26 @@
+/* Основной контейнер, который занимает всю высоту экрана */
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #EAEAEA; /* Фон для всего контента, кроме карточек и футера */
+    width: 100%; /* Ширина страницы не должна превышать экран */
+    overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
+}
+
+  
+  /* Контент, который растягивается на всю оставшуюся высоту */
+  .content {
+    flex: 1;
+    padding-top: 80px; /* Отступ для хедера */
+    padding-bottom: 80px; /* Отступ для футера */
+    background-color: transparent; /* Прозрачный фон для того, чтобы карточки оставались на белом фоне */
+  }
+  
+  
+  header, footer {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  

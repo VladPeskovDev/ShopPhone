@@ -1,11 +1,10 @@
 
 .product-catalog {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 колонки */
-  gap: 20px; /* Промежуток между карточками */
+  grid-template-columns: repeat(3, 1fr); /* Три колонки фиксированной ширины */
+  gap: 20px; /* Промежутки между карточками */
   max-width: 1200px; /* Максимальная ширина каталога */
+  margin: 80px auto; /* Центрируем каталог по горизонтали */
   padding: 0 20px; /* Отступы слева и справа */
-  margin: 80px auto 0 auto; /* Центрируем и добавляем отступ сверху */
-  box-sizing: border-box;
-  margin-left: 260px;
+  box-sizing: border-box; /* Убедимся, что padding не увеличивает ширину */
 }

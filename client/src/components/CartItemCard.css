@@ -1,16 +1,16 @@
-/* src/components/CartItemCard.css */
-
 .cart-item-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
   border: 1px solid #ccc;
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: white;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-  width: 100%;
+  width: 100%; /* Карточка должна занимать всю ширину родителя */
+  box-sizing: border-box; /* Учитываем padding и border */
+  overflow: hidden; /* Отключаем обрезку контента */
 }
 
 .cart-item-image {
@@ -21,7 +21,7 @@
 }
 
 .cart-item-info {
-  flex-grow: 1;
+  flex-grow: 1; /* Карточка растягивается */
   padding-left: 20px;
 }
 
