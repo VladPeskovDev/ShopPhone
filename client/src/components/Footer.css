@@ -1,19 +1,18 @@
 .footer {
-  width: 100%; /* Полная ширина страницы */
+  width: 100%; 
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   background-color: white;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box; /* Убедимся, что padding не увеличивает ширину */
+  box-sizing: border-box; 
   width: 895px;
   margin-left: 265px;
   margin-top: 15px;
-  border-top-left-radius: 10px; /* Закругление верхнего левого угла */
-  border-top-right-radius: 10px; /* Закругление верхнего правого угла */
+  border-top-left-radius: 10px; 
+  border-top-right-radius: 10px; 
 }
-
 
 .footer-left {
   display: flex;
@@ -23,20 +22,26 @@
 
 .footer-right {
   display: flex;
-  gap: 20px; /* Отступы между иконками */
+  gap: 20px; 
+  align-items: flex-start; 
 }
 
 .icon-link {
   color: black;
   text-decoration: none;
+  padding: 5px;
+  transition: color 0.3s ease;
+ 
+  
 }
 
 .icon {
-  font-size: 24px; /* Размер иконок */
+  font-size: 24px; 
   transition: color 0.3s ease;
 }
 
 .icon:hover {
-  color: #007bff; /* Изменение цвета при наведении */
+  color: #007bff; 
 }
+
 

@@ -1,6 +1,5 @@
-// src/contexts/CartContext.tsx
 import React, { createContext, useContext, useState } from 'react';
-import { Product } from '../components/Product';
+import type { Product } from './Product';
 
 interface CartItem extends Product {
   quantity: number;
@@ -16,11 +15,10 @@ interface CartContextType {
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
-export const CartProvider: React.FC = ({ children }) => {
+export default function CartProvider({ children }: { children: React.ReactNode }): JSX.Element {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
-  // Добавить товар в корзину
-  const addToCart = (product: Product) => {
+  const addToCart = (product: Product): void => {
     setCartItems((prevItems) => {
       const existingItem = prevItems.find((item) => item.id === product.id);
       if (existingItem) {
@@ -34,13 +32,13 @@ export const CartProvider: React.FC = ({ children }) => {
     });
   };
 
-  // Удалить товар из корзины
-  const removeItem = (id: number) => {
+
+  const removeItem = (id: number): void => {
     setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
   };
 
-  // Увеличить количество товара
-  const increaseQuantity = (id: number) => {
+  
+  const increaseQuantity = (id: number): void => {
     setCartItems((prevItems) =>
       prevItems.map((item) =>
         item.id === id ? { ...item, quantity: item.quantity + 1 } : item
@@ -48,8 +46,8 @@ export const CartProvider: React.FC = ({ children }) => {
     );
   };
 
-  // Уменьшить количество товара
-  const decreaseQuantity = (id: number) => {
+  
+  const decreaseQuantity = (id: number): void => {
     setCartItems((prevItems) =>
       prevItems.map((item) =>
         item.id === id && item.quantity > 1
@@ -61,6 +59,7 @@ export const CartProvider: React.FC = ({ children }) => {
 
   return (
     <CartContext.Provider
+      // eslint-disable-next-line react/jsx-no-constructed-context-values
       value={{
         cartItems,
         addToCart,
@@ -72,9 +71,9 @@ export const CartProvider: React.FC = ({ children }) => {
       {children}
     </CartContext.Provider>
   );
-};
+}
 
-export const useCart = () => {
+export const useCart = (): CartContextType => {
   const context = useContext(CartContext);
   if (!context) {
     throw new Error('useCart must be used within a CartProvider');
