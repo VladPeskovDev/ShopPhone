@@ -1,13 +1,8 @@
 
-.App {
-  text-align: center;
-}
-
-.cart-content {
-  margin: 20px;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #EAEAEA; /* Глобальный цвет фона */
+  overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
 }

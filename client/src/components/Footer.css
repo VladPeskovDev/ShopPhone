@@ -1,16 +1,42 @@
 .footer {
+  width: 100%; /* Полная ширина страницы */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 850px;
-  height: 149px;
-  margin: 0 auto;
   padding: 20px;
   background-color: white;
-  margin-left: 278px;
-  margin-top: 30px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Убедимся, что padding не увеличивает ширину */
+  width: 895px;
+  margin-left: 265px;
+  margin-top: 15px;
+  border-top-left-radius: 10px; /* Закругление верхнего левого угла */
+  border-top-right-radius: 10px; /* Закругление верхнего правого угла */
 }
+
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-right {
+  display: flex;
+  gap: 20px; /* Отступы между иконками */
+}
+
+.icon-link {
+  color: black;
+  text-decoration: none;
+}
+
+.icon {
+  font-size: 24px; /* Размер иконок */
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #007bff; /* Изменение цвета при наведении */
+}
+

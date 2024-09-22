@@ -1,19 +1,33 @@
-// src/App.tsx
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Layout from './components/Layout';
 import CatalogPage from './components/pages/CatalogPage';
 import CartPage from './components/pages/CartPage';
-import { CartProvider } from './components/CartContext';
+import { CartProvider } from './components/CartContext'; // Импортируем CartProvider
+import './App.css'; 
+
+// Определение маршрутов
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Layout />, 
+    children: [
+      {
+        path: '/',
+        element: <CatalogPage />,
+      },
+      {
+        path: '/cart',
+        element: <CartPage />,
+      },
+    ],
+  },
+]);
 
 function App(): JSX.Element {
   return (
-    <CartProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<CatalogPage />} />
-          <Route path="/cart" element={<CartPage />} />
-        </Routes>
-      </Router>
+    <CartProvider> {/* Оборачиваем всё в CartProvider */}
+      <RouterProvider router={router} />
     </CartProvider>
   );
 }

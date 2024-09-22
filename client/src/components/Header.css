@@ -1,15 +1,18 @@
-/* styles/Header.css */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 1109.89px;
-    height: 60px;
-    position: absolute;
-    left: 165px;
-    top: 0;
-  }
-  
+  width: 100%; /* Полная ширина страницы */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #EAEAEA; /* Фон хедера */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box; /* Убедимся, что padding не увеличивает ширину */
+}
+
   .logo {
     font-size: 24px;
     font-weight: bold;
