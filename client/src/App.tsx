@@ -3,7 +3,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './components/Layout';
 import CatalogPage from './components/pages/CatalogPage';
 import CartPage from './components/pages/CartPage';
-import { CartProvider } from './components/CartContext'; // Импортируем CartProvider
+import  CartProvider  from './components/CartContext'; 
+import LikePage from './components/pages/LikePage';
 import './App.css'; 
 
 // Определение маршрутов
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: '/cart',
         element: <CartPage />,
+      },
+      {
+        path: '/like',
+        element: <LikePage />,
       },
     ],
   },

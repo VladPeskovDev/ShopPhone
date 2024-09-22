@@ -7,7 +7,7 @@ export type Product = {
     rating: number;
   };
   
-  // Массив товаров
+  
   export const products: Product[] = [
    
   {

@@ -7,7 +7,7 @@ export type Product = {
     rating: number;
   };
   
-  // Массив товаров
+ 
   export const products: Product[] = [
     { id: 1, name: 'Apple BYZ S852I', price: 2927, image: 'https://phonatik.by/upload/iblock/a8c/2o3gtiuk73o8rg5y956u4udnbh6tc8jm.png', rating: 4.7 },
   {

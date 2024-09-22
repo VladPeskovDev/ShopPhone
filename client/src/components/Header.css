@@ -13,27 +13,36 @@
   box-sizing: border-box; /* Убедимся, что padding не увеличивает ширину */
 }
 
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .icons {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .icon {
-    width: 24px;
-    height: 24px;
-    background-size: contain;
-  }
-  
-  .heart {
-    background-image: url('/path-to-heart-icon');
-  }
-  
-  .cart {
-    background-image: url('/path-to-cart-icon');
-  }
-  
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+}
+
+.cart-icon-wrapper {
+  position: relative;
+}
+
+.cart-counter {
+  position: absolute;
+  top: -10px; /* Сдвигаем счётчик вверх */
+  right: -10px; /* Сдвигаем счётчик вправо */
+  background-color: rgb(255, 165, 0); /* Цвет фона для счётчика */
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 50%;
+  min-width: 2px;
+  text-align: center;
+}

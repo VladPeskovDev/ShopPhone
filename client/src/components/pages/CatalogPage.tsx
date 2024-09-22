@@ -12,7 +12,6 @@ function CatalogPage(): JSX.Element {
       <ProductCatalog />
       <ProductCatalog2 />
       </div>
-      <Footer/>
       </div>
   );
 }
